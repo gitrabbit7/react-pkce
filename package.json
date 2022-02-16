@@ -1,0 +1,67 @@
+{
+  "name": "react-pkce",
+  "version": "0.9.11",
+  "description": "React components to authenticate via PKCE",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "PORT=3001 react-scripts start",
+    "build": "babel src/lib --out-dir dist --source-maps",
+    "build:watch": "npm run build -- --watch",
+    "prepublish": "npm run clean && npm run build",
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sample": "webpack-dev-server --port 3001 --config ./sample/webpack.config.js"
+  },
+  "author": "Chris Oloff <chris@uber5.com> (http://about.uber5.com/)",
+  "keywords": [
+    "oauth2",
+    "authentication",
+    "react",
+    "pkce"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Uber5/react-u5auth/tree/react-pkce",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Uber5/react-pkce.git"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "^3.4.3",
+    "rimraf": "2.5.4",
+    "source-map-support": "0.4.5"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
